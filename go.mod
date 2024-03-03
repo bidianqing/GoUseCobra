@@ -1,4 +1,4 @@
-module github.com/bidianqing/gousecobra
+module github.com/bidianqing/go-use-cobra
 
 go 1.21.5
 

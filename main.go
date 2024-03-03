@@ -1,7 +1,16 @@
 package main
 
-import "github.com/bidianqing/gousecobra/cmd"
+import (
+	"fmt"
+	"os"
+
+	"github.com/bidianqing/go-use-cobra/cmd"
+)
 
 func main() {
-	cmd.Execute()
+	cmd := cmd.NewMygoCommand()
+	if err := cmd.Execute(); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }
