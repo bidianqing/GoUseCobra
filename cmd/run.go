@@ -15,7 +15,6 @@ func newCmdRun() *cobra.Command {
 		Long:  `run命令`,
 		Run: func(cmd *cobra.Command, args []string) {
 			fmt.Println("run ", env)
-			fmt.Println(args)
 		},
 	}
 
