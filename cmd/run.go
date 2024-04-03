@@ -13,6 +13,9 @@ func newCmdRun() *cobra.Command {
 		Use:   "run",
 		Short: "run命令",
 		Long:  `run命令`,
+		PreRun: func(cmd *cobra.Command, args []string) {
+			fmt.Printf("Run之前执行,env=%s\n", env)
+		},
 		Run: func(cmd *cobra.Command, args []string) {
 			fmt.Println("run ", env)
 		},
